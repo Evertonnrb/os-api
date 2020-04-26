@@ -25,9 +25,6 @@ import com.osapi.domain.service.CadastroClienteService;
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
-
-	/*@PersistenceContext
-	private EntityManager manager;*/
 	
 	@Autowired
 	private ClienteRepository repository;

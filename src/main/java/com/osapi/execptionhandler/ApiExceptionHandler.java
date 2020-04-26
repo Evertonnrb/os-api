@@ -43,7 +43,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler{
 		for(ObjectError error : ex.getBindingResult().getAllErrors()) {
 			String mensagem = messageSource.getMessage(error, LocaleContextHolder.getLocale());
 			String nome = error.getObjectName();
-			campos.add(new Problema.Campo("", mensagem));
+			campos.add(new Problema.Campo(nome, mensagem));
 		}
 		problema.setStatus(status.value());
 		problema.setTitulo("Atenção aos campos informados");
